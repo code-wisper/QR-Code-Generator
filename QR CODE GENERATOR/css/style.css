@@ -1,0 +1,95 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #3498d8;
+}
+
+.container--width {
+  width: 80%;
+  margin-inline: auto;
+}
+
+@media (min-width: 700px) {
+  .container--width {
+    width: 30%;
+    margin-inline: auto;
+  }
+}
+
+.container {
+  background-color: #fff;
+  padding: 2rem;
+  border-radius: 5px;
+  height: 255px;
+  transition: height 0.3s ease;
+}
+
+.container.active {
+  height: 530px;
+}
+
+.container h1 {
+  font-size: 1.3rem;
+  font-weight: 500;
+}
+
+.container p {
+  font-size: 0.9rem;
+  margin: 0.5rem 0;
+  color: #474747;
+}
+
+.container form {
+  margin-top: 1rem;
+  margin-bottom: 1.3rem;
+}
+
+form :where(input, button) {
+  width: 100%;
+  padding: 0.7em;
+  border: none;
+  outline: none;
+  border-radius: 3px;
+}
+
+form input {
+  font-size: 1rem;
+  border: 1px solid #999;
+  font-family: inherit;
+}
+
+form button {
+  cursor: pointer;
+  color: #fff;
+  font-size: 1rem;
+  background-color: #3498d8;
+  margin: 1rem 0;
+  font-family: inherit;
+}
+
+.container .qr-code {
+  opacity: 0;
+  pointer-events: none;
+  border: 1px solid #ccc;
+  padding: 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.container.active .qr-code {
+  opacity: 1;
+  pointer-events: auto;
+  transition: opacity 0.5s 0.05s ease;
+}
